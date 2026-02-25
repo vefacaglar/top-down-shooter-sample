@@ -1287,7 +1287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFollow
   player: {fileID: 1632541697}
-  offset: {x: 0, y: 5, z: -5}
+  offset: {x: 5, y: 10, z: -5}
   smoothTime: 0.3
 --- !u!1 &1017265726
 GameObject:
@@ -1461,7 +1461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1079219841
 Transform:
   m_ObjectHideFlags: 0

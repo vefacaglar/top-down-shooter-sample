@@ -27,6 +27,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        rb.centerOfMass = new Vector3(0, -0.5f, 0);
     }
 
     // Update is called once per frame
@@ -85,8 +87,8 @@ public class Player : MonoBehaviour
 
     private void ApplyMovement()
     {
-        Vector3 movement = transform.forward * verticalInput * moveSpeed;
-        rb.linearVelocity = movement;
+        Vector3 movement = transform.forward * verticalInput * moveSpeed * Time.fixedDeltaTime;
+        rb.MovePosition(rb.position + movement);
     }
 
     private void ApplyBodyRotation()
