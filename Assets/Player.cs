@@ -87,8 +87,9 @@ public class Player : MonoBehaviour
 
     private void ApplyMovement()
     {
-        Vector3 movement = transform.forward * verticalInput * moveSpeed * Time.fixedDeltaTime;
-        rb.MovePosition(rb.position + movement);
+        Vector3 targetVelocity = transform.forward * verticalInput * moveSpeed;
+
+        rb.linearVelocity = new Vector3(targetVelocity.x, rb.linearVelocity.y, targetVelocity.z);
     }
 
     private void ApplyBodyRotation()
